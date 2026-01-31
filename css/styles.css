@@ -926,6 +926,9 @@ body {
     .header-container {
         justify-content: space-between;
     }
+        .portfolio-item {
+            width: calc((100% - 32px) / 2);
+        }
 }
 
 /* --Desktop (min-width: 1158px)-- */
@@ -937,131 +940,20 @@ body {
     .header-container {
         padding: 32px 0;
     }
+        .portfolio-item {
+            width: calc((100% - 48px) / 3);
+        }
 }
 
-/* -------------------------------- 
-  Responsive breakpoints (Mobile First)
------------------------------------- */
-
-/* 🟦 Base (mobile, max-width ~ 320+) */
-body {
-    font-size: 16px;
-}
-
-/* ---------------------
-      Mobile menu
----------------------- */
-.mobile-menu-toggle {
-    display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-    width: 32px;
-    height: 32px;
-    position: relative;
-    z-index: 10;
-    margin-left: 15px;
-}
-
-.mobile-menu-icon,
-.mobile-menu-icon::before,
-.mobile-menu-icon::after {
-    content: "";
-    display: block;
-    width: 26px;
-    height: 3px;
-    background-color: var(--navy-blue);
-    transition: transform 0.3s ease;
-}
-
-.mobile-menu-icon::before {
-    transform: translateY(-8px);
-}
-
-.mobile-menu-icon::after {
-    transform: translateY(5px);
-}
-
-/* Hidden by default */
-.mobile-menu {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    height: 100vh;
-    width: 260px;
-    background-color: var(--white);
-    transition: left 0.3s ease;
-}
-
-.mobile-menu-list {
-    list-style: none;
-    padding: 72px 24px;
-}
-
-.mobile-menu-link {
-    display: block;
-    padding: 12px 0;
-    font-size: 18px;
-    color: var(--slate);
-    text-decoration: none;
-}
-
-/* Open */
-.mobile-menu.is-open {
-    left: 0;
-}
-
-/* Menu toggle animation */
-.mobile-menu.is-open .mobile-menu-icon {
-    background: transparent;
-}
-
-.mobile-menu.is-open .mobile-menu-icon::before {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.mobile-menu.is-open .mobile-menu-icon::after {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* Hide mobile toggle on desktop later */
-.header-nav,
-.contacts {
-    display: none;
-}
-
-/* --------------------------------
-  Breakpoint: Tablet (min-width: 768px)
------------------------------------- */
-@media (min-width: 768px) {
-
-    .mobile-menu-toggle,
-    .mobile-menu {
-        display: none;
+@media (max-width: 767px) {
+    .about-item {
+        width: 100%;
+        margin-bottom: 16px;
     }
-
-    .header-nav,
-    .contacts {
-        display: flex;
-        align-items: center;
-    }
-
-    .header-container {
-        justify-content: space-between;
-    }
+         .section-hero {
+             padding: 100px 0;
+         }
 }
-
-/* --Desktop (min-width: 1158px)--- */
-@media (min-width: 1158px) {
-    .container {
-        max-width: 1158px;
-    }
-
-    .header-container {
-        padding: 32px 0;
-    }
-}
-
 
 /* --Images @2x-- */
 @media (min-resolution: 2dppx) {
@@ -1071,4 +963,6 @@ body {
             url('../images/people_office@2x.jpg');
     }
 }
+
+
 
